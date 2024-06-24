@@ -1,0 +1,272 @@
+@import "../../scss/index.scss";
+
+.loginSection {
+    width: 100%;
+    height: 100vh;
+    background: transparent linear-gradient(91deg, #221169 0%, #0a4c7c 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 24px 0;
+
+    @include breakpoint("md-max") {
+        padding: 20px;
+    }
+    .logoAlignment {
+        padding: 0 0 48px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        span {
+            display: block;
+            font-size: 10px;
+            color: #eef8f7;
+            text-align: right;
+          }
+
+        @include breakpoint("md-max") {
+            margin: 0;
+        }
+
+        @include breakpoint("sm-max") {
+            width: 132px;
+        }
+    }
+    .loginFormAlignment {
+        width: 820px;
+        height: auto;
+        background: #fff;
+        border-radius: 20px;
+        padding: 36px 76px 44px 17px;
+        position: relative;
+        z-index: 999;
+        @include breakpoint("md-max") {
+            width: 100%;
+        }
+
+        @include breakpoint("sm-max") {
+            padding: 16px;
+        }
+
+        .loginFormGrid {
+            display: grid;
+            grid-template-columns: 305px 1fr;
+            gap: 40px;
+
+            @include breakpoint("md-max") {
+                grid-template-columns: 1fr;
+            }
+            .leftImg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-right: 1px  solid #e0e0e0;
+                img{
+                    height: 200px;
+                   width: 200px;
+               }
+
+                @include breakpoint("md-max") {
+                    display: none;
+                }
+            }
+
+            .rightSideFormAlignment {
+                text-align: center;
+                h1 {
+                    color: #272727;
+                    font-size: 29px;
+                    line-height: 36px;
+                    letter-spacing: -0.29px;
+                    font-weight: 500;
+                    padding: 0 0 9px 0;
+                    @include breakpoint("md-max") {
+                        font-size: 24px;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: -0.14px;
+                    color: #272727;
+                    font-weight: 400;
+                }
+
+                .formDetailsALignment {
+                    padding: 34px 0 0 0;
+
+                    .inputAlignment {
+                        width: 100%;
+                        height: 54px;
+                        margin: 0 0 22px 0;
+                        &:last-child {
+                            margin: 0;
+                        }
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 30px;
+                            background: #f5f5f5;
+                            border: none;
+                            padding: 0 25px;
+                            font-size: 14px;
+                            line-height: 18px;
+                            letter-spacing: -0.14px;
+                            color: #272727;
+                            font-weight: 600;
+                            &:focus {
+                                outline: none;
+                            }
+                          
+                        }
+                        ::placeholder {
+                            font-weight: 400;
+                            color: #272727;
+                            
+                        }
+                    }
+                }
+
+                .forgotPasswordAlignment {
+                    padding: 8px 0 0 0;
+                    text-align: right;
+                    a {
+                        font-size: 14px;
+                        line-height: 18px;
+                        font-weight: 500;
+                        letter-spacing: -0.14px;
+                        color: #272727;
+                        cursor: pointer;
+                    }
+                }
+                .buttonALignment {
+                    padding: 26px 0 0 0;
+
+                    button {
+                        width: 100%;
+                        height: 54px;
+                        background: #ff6261;
+                        border: none;
+                        font-size: 14px;
+                        line-height: 18px;
+                        letter-spacing: -0.14px;
+                        color: #ffffff;
+                        border-radius: 30px;
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 749px;
+            height: 376px;
+            background: rgba(255, 255, 255, 0.3);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -20px;
+            border-radius: 20px;
+            z-index: -1;
+
+            @include breakpoint("sm-max") {
+                width: calc(100% - 20px);
+            }
+        }
+    }
+}
+
+.dropdowndesignRelative {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 999;
+  
+    .animation {
+      display: flex;
+      align-items: center;
+      svg {
+        transition: 0.3s ease-in-out;
+        fill: #fff;
+      }
+    }
+    .rotate {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .cusdropdownDesign {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: #fff;
+      width: 100%;
+      z-index: 999;
+  
+      &.hide {
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+      }
+  
+      &.show {
+        max-height: 100vh;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+      }
+  
+      .leftIconAlignment {
+        padding: 14px;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        cursor: pointer;
+        span {
+          font-size: 14px;
+          color: #221169;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: block;
+        }
+      }
+    }
+  
+    .dropdown {
+      height: 40px;
+      width: 140px;
+      padding: 0 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include breakpoint("sm-max") {
+        width: 110px;
+        padding: 0 10px;
+      }
+      .leftIconAlignment {
+        gap: 8px;
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 14px;
+          color: #fff;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: block;
+        }
+      }
+    }
+  }

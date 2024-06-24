@@ -1,0 +1,83 @@
+@import '../scss/mixins/container.scss';
+@import '../scss/mixins/breakpoints.scss';
+@import '../scss/mixins/typography.scss';
+@import '../scss/mixins/layout.scss';
+@import '../scss/mixins/input.scss';
+@import '../scss/theme.scss';
+@import '../scss/common.scss';
+@import '../scss/variables.scss';
+
+
+.arabic , ::placeholder , button,textarea, input{
+  font-family:var(--font-inter);
+  white-space: nowrap;
+}
+.english , ::placeholder , button,textarea, input{
+  font-family:var(--font-inter-deca);
+  white-space: nowrap;
+
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--page-background-primary);
+  color: var(--palette-text-primary-color);
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p:last-child {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.mapboxgl-map{
+  overflow: unset !important;  
+  border-radius: 10px !important;
+  font : unset !important;
+
+font:var(--font-inter);
+
+}
+
+.popup{
+  font-family:var(--font-inter) !important;
+
+}
+
+.map-small {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.map-medium {
+  width: 100%;
+  height: 100vh !important;
+}
+
+
+.map-smalls{
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+

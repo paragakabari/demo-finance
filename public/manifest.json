@@ -1,0 +1,22 @@
+{
+    "name": "E-Procure",
+    "short_name": "E-Procure",
+    "description": "E-Procure is a web application that allows users to create and manage procurement requests.",
+    "icons": [
+      {
+        "src": "/log.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/log.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#0A4C7C",
+    "theme_color": "#221169",
+    "display": "standalone"
+  }
+  

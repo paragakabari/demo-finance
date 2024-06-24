@@ -1,0 +1,359 @@
+@import "../../scss/index.scss";
+
+.dashboardSection {
+  position: relative;
+  background: #f7f7f7;
+  height: 100vh;
+  overflow-y: auto;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 270px;
+    background: transparent linear-gradient(90deg, #221169 0%, #0a4c7c 100%);
+    width: 100%;
+  }
+
+  .dashboardAlignment {
+    position: relative;
+    padding: 32px 0;
+    .dashboardetails {
+      span {
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 40px;
+        font-weight: 300;
+      }
+      h1 {
+        padding: 15px 0 0 0;
+        font-size: 33px;
+        line-height: 45px;
+        font-weight: 600;
+        color: #ffffff;
+        text-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+
+        @include breakpoint("sm-max") {
+          padding: 6px 0 0 0;
+        }
+      }
+    }
+
+    .dashboardAllDetailsAlignment {
+      padding: 36px 0 0 0;
+
+      @include breakpoint("sm-max") {
+        padding: 24px 0 0 0;
+      }
+      .dashboardetailsGrid {
+        display: grid;
+        grid-template-columns: 1fr 593px;
+        gap: 44px;
+        @media only screen and (max-width: "1399px") {
+          gap: 16px;
+        }
+        @include breakpoint("lg-max") {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .dashboardetailsGridItem:last-child {
+          background-color: #fff;
+          border-radius: 20px;
+        }
+        .dashboardetailsGridItem {
+          .rightSideAlignment {
+            width: 100%;
+            background: #fff;
+            border-radius: 20px;
+            padding: 43px 36px 43px 16px;
+            .chartAlignment {
+              padding: 20px 0;
+
+              .chartLabel {
+                sup {
+                  font-size: 14px;
+                }
+                font-size: 30px;
+                font-weight: bold;
+              }
+              .chartTitle {
+                color: #9a9a9a;
+                font-size: 14px;
+              }
+            }
+            .dashboardHeadingAlignment {
+              h2 {
+                font-size: 20px;
+                line-height: 25px;
+                color: #000000;
+                font-weight: 600;
+                padding: 0 0 6px 0;
+              }
+              p {
+                font-size: 14px;
+                line-height: 18px;
+                color: #9a9a9a;
+                font-weight: 400;
+              }
+            }
+          }
+          .boxAlignment {
+            cursor: pointer;
+            background: #ffffff;
+            width: 100%;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 10px;
+            padding: 26px;
+
+            .cibankDetailsAlignment {
+              display: flex;
+              padding: 0 0 11px 0;
+              justify-content: flex-end;
+            }
+            h4 {
+              font-size: 45px;
+              line-height: 53px;
+              color: #000000;
+              font-weight: 300;
+            }
+
+            p {
+              font-size: 15px;
+              line-height: 45px;
+              color: #868686;
+              &.details {
+                line-height: 21px;
+              }
+            }
+
+            .rateAlignment {
+              padding: 32px 0 0 0;
+
+              .rateoxAlignment {
+                background: rgba(0, 204, 5, 0.1);
+                width: 55px;
+                height: 24px;
+                border-radius: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p {
+                  font-size: 15px;
+                  line-height: 24px;
+                  font-weight: 600;
+                  color: #00cc08;
+                }
+
+                &.grayBox {
+                  background: rgba(101, 101, 101, 0.1);
+                  p {
+                    color: #484848;
+                  }
+                }
+              }
+            }
+          }
+          .leftSideAlignment {
+            .leftGridAlignment {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 26px;
+
+              @media only screen and (max-width: "1399px") {
+                gap: 16px;
+              }
+              @include breakpoint("sm-max") {
+                grid-template-columns: repeat(1, 1fr);
+              }
+            }
+
+            .leftTwoGridAlignment {
+              display: grid;
+              grid-template-columns: 2fr 1fr;
+              gap: 26px;
+              padding: 30px 0 0 0;
+              @media only screen and (max-width: "1399px") {
+                gap: 16px;
+              }
+              @include breakpoint("sm-max") {
+                grid-template-columns: 1fr;
+              }
+              .boxAlignment:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+              }
+              .boxAlignment {
+                background: #ffffff;
+                width: 100%;
+                box-shadow: 0px 3px 6px #00000029;
+                border-radius: 10px;
+                padding: 20px 26px 25px 22px;
+                .topHeadingAlignment {
+                  display: flex;
+                  align-items: center;
+                  gap: 40px;
+                  flex-wrap: wrap;
+
+                  @media only screen and (max-width: "1399px") {
+                    gap: 20px;
+                  }
+                  h4 {
+                    font-size: 53px;
+                    line-height: 45px;
+                    color: #000000;
+                    font-weight: 300;
+                  }
+                  p {
+                    font-size: 15px;
+                    line-height: 45px;
+                    color: #868686;
+
+                    @media only screen and (max-width: "1399px") {
+                      font-size: 14px;
+                    }
+                  }
+
+                  .details {
+                    width: 220px;
+                    height: 112px;
+                    position: relative;
+                    .firsstRound {
+                      width: 73px;
+                      height: 73px;
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background: rgba(75, 196, 127, 1);
+                      position: absolute;
+                      left: 0;
+                      bottom: 0;
+                      p {
+                        color: rgba(254, 254, 254, 1);
+                        font-size: 20px;
+                        line-height: 25px;
+                      }
+                    }
+
+                    .secondRound {
+                      width: 112px;
+                      height: 112px;
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background: #393939;
+                      position: absolute;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      left: 80px;
+                      p {
+                        color: rgba(254, 254, 254, 1);
+                        font-size: 32px;
+                        line-height: 40px;
+                        font-weight: 500;
+                      }
+                    }
+
+                    .thirdRound {
+                      width: 60px;
+                      height: 60px;
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background: #ac0b0b;
+                      position: absolute;
+                      top: -4px;
+                      left: 40px;
+                      p {
+                        color: #fefefe;
+                        font-size: 18px;
+                        line-height: 23px;
+                        font-weight: 500;
+                      }
+                    }
+
+                    .fourRound {
+                      width: 45px;
+                      height: 45px;
+                      border-radius: 50%;
+                      background: #fda953;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      position: absolute;
+                      right: 0;
+                      bottom: 0;
+                      p {
+                        font-size: 15px;
+                        line-height: 19px;
+                        color: #fefefe;
+                        font-weight: 500;
+                      }
+                    }
+                  }
+                }
+
+                .bottomHedingAlignment {
+                  padding: 21px 0 0 0;
+                  display: flex;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  gap: 10px;
+
+                  .statusBox {
+                    background: rgba(0, 204, 5, 0.1);
+                    padding: 3px 11px 3px 9px;
+                    border-radius: 2px;
+                    p {
+                      font-size: 12px;
+                      line-height: 18px;
+                      font-weight: 500;
+                      color: #00cc08;
+                    }
+
+                    &:nth-child(2) {
+                      background: rgba(173, 11, 11, 0.1);
+                      p {
+                        color: rgba(173, 11, 11, 1);
+                      }
+                    }
+
+                    &:nth-child(3) {
+                      background: rgba(255, 168, 29, 0.1);
+                      p {
+                        color: rgba(227, 145, 13, 1);
+                      }
+                    }
+                    &:nth-child(4) {
+                      background: rgba(119, 119, 119, 0.1);
+                      p {
+                        color: rgba(57, 57, 57, 1);
+                      }
+                    }
+                    &:nth-child(5) {
+                      background: rgba(83, 88, 203, 0.1);
+                      p {
+                        color: rgba(31, 31, 186, 1);
+                      }
+                    }
+                    &:nth-child(6) {
+                      background: rgba(47, 185, 74, 0.1);
+                      p {
+                        color: rgba(57, 57, 57, 1);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
