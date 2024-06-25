@@ -107,10 +107,11 @@ export default function RequestComponent({ locale}) {
                         <div className={Styles.buyersName}>
                         <div className={Styles.requestRound}>
                           <Image
+                          unoptimized
                             src={data?.image}
                             alt="round"
-                            height={40}
-                            width={40}
+                            height={0}
+                            width={0}
                           />
                         </div>
                         <div>
