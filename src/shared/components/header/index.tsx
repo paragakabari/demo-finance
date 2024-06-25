@@ -191,7 +191,7 @@ export default function Header({ locale }) {
                   className={styles.bell}
                 />
               </div>
-              <div className={styles.logoutButton}>
+              <div className={styles.logoutButton} onClick={() => router.push("/")}>
                 <button>{t("logout")}</button>
               </div>
               <div className={styles.mobilelogoAlignment}>
@@ -208,6 +208,7 @@ export default function Header({ locale }) {
         </div>
       </div>
       <div
+      
         className={classNames(
           classNames(styles.mobilesidebar, header ? styles.show : styles.hide)
         )}
@@ -251,7 +252,11 @@ export default function Header({ locale }) {
           </div>
         </div>
 
-        <div className={styles.logoutSidebar}>{t("logout")}</div>
+        <div className={styles.logoutSidebar} 
+        onClick={() => router.push("/")}
+        >{t("logout")} 
+
+        </div>
       </div>
     </>
   );

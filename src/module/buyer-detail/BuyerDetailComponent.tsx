@@ -10,10 +10,11 @@ import RequestComponent from "./requestComponet";
 import BuyerComponet from "./buyeComponent";
 import TransationComponent from "./transationComponent";
 import AnalysisComponent from "./analysisComponent";
+import { useRouter } from "next/navigation";
 
 export default function BuyerDetailComponent({locale}) {
   const t = useTranslations("Request");
-
+const router = useRouter();
   const [tab, setTab] = useState("overviews");
 
   return (
@@ -30,7 +31,9 @@ export default function BuyerDetailComponent({locale}) {
 
             <div className={styles.buyerRightAlignment}>
               <button>{t("request_button")}</button>
-              <button>{t("needmore")}</button>
+              <button onClick={()=> router.push(`/${locale}/report`)}>
+
+            {t("needmore")}</button>
             </div>
           </div>
 

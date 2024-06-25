@@ -4,6 +4,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import RejectModel from "./rejectModel";
 import Styles from "./request.module.scss";
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 
 export default function RequestComponent({ locale}) {
@@ -21,59 +22,66 @@ export default function RequestComponent({ locale}) {
   const tableData = [
     {
       id: 1,
-      buyerName: "John_Doe",
+      buyerName: "Parag ",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      image: "/assets/ar.png",
     },
     {
       id: 2,
-      buyerName: "John_Doe",
+      buyerName: "Raj Aryan",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      image: "/assets/bayan.jpeg",
     },
     {
       id: 3,
-      buyerName: "John_Doe",
+      buyerName: "Manish Kumar",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      image:'/assets/hsbc-icon-md.png'
     },
     {
       id: 4,
-      buyerName: "John_Doe",
+      buyerName: "Jack Sparrow",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      image:'/assets/microsoft.png'
     },
     {
       id: 5,
-      buyerName: "John_Doe",
+      buyerName: "John Doe",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      image:'/assets/fina.png'
     },
     {
       id: 6,
-      buyerName: "John_Doe",
+      buyerName: "Joseph",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      image:'/assets/jayco.jpeg'
     },
     {
       id: 7,
-      buyerName: "John_Doe",
+      buyerName: "Melvin",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      image: "/assets/elm.png",
     },
   ];
   return (
@@ -97,10 +105,17 @@ export default function RequestComponent({ locale}) {
                     
                       <td onClick={()=>router.push(`/${locale}/buyer-detail`)}>
                         <div className={Styles.buyersName}>
-                        <div className={Styles.requestRound}>JB</div>
+                        <div className={Styles.requestRound}>
+                          <Image
+                            src={data?.image}
+                            alt="round"
+                            height={40}
+                            width={40}
+                          />
+                        </div>
                         <div>
                           <div className={Styles.tableHeading}>
-                            {t(data.buyerName)}
+                            {(data.buyerName)}
                           </div>
                           <div className={Styles.tableSubHeading}>
                             {data.workspaceId}

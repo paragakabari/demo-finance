@@ -159,6 +159,10 @@
                         border-radius: 30px;
                         font-weight: 500;
                         cursor: pointer;
+                        &:hover{
+                          background: transparent linear-gradient(91deg, #221169 0%, #0a4c7c 100%) 0% 0% no-repeat padding-box;
+                          transition: 0.5s ease-in-out;
+                        }
                     }
                 }
             }

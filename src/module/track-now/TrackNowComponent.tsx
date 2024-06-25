@@ -31,7 +31,11 @@ export default function TrackNowComponent({ locale }) {
   return (
     <div className={styles.mapcontainer}>
       <div className={styles.sidebar}>
-        <h2>{t("TrackYourInvestment")}</h2>
+        <h2
+        onClick={
+          () => redirect.push(`/${locale}/track-request-id`)
+        }
+        >{t("TrackYourInvestment")}</h2>
         <p>{t("MapView")}</p>
         <div className={styles.borderBorttom}></div>
         <div className={styles.search}>

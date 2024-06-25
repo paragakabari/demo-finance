@@ -94,6 +94,9 @@ export default function DashBoard({ locale }) {
 
   const options1 = {
     plugins: {
+      legend: {
+        display: false,
+      },
       tooltip: {
         callbacks: {
           label: function (context) {

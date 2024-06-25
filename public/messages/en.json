@@ -31,6 +31,7 @@
   },
   "Reject": {
     "request": "Request",
+    "Approved": "Approved",
     "request_received": "Request Received",
     "title": "Are your sure you want to reject the request for Buyer Name of 234334 SAR",
     "subHeading": "Reason for rejection",
