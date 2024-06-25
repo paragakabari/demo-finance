@@ -90,6 +90,38 @@ export default function OverviewComponent() {
     },
   };
 
+  const purchaseData=[
+    {
+      image:'/assets/chair.jpeg',
+      name:'RFX-1232',
+      des:'Office Chair (Black)'
+    },
+    {
+      image:'/assets/cap.jpeg',
+      name:'RFx-3434',
+      des:'Red Cap'
+    },
+    {
+      image:"/assets/alka.png",
+      name:'P0-123',
+      des:"T-shiert Women"
+    },
+    {
+      image:'/assets/roy.png',
+      name:'Tes-45',
+      des:"Mens Shirts"
+    },
+    {
+      image:'/assets/tata.png',
+      name:'Tes-45',
+      des:"Mens Shirts"
+    },
+    {
+      image:'/assets/nils.png',
+      name:'Tes-45',
+      des:"Mens Shirts"
+    }
+  ]
 
 
 
@@ -132,7 +164,7 @@ export default function OverviewComponent() {
             <div className={styles.leftSideAlignment}>
               <h6>{t("Recent_Purchases")}</h6>
               <div className={styles.leftSideDetailsALignment}>
-                {[0, 1, 2, 3, 4].map((key) => {
+                {purchaseData.map((data,key) => {
                   return (
                     <div className={styles.productDetailsAlignment} key={key}>
                       <div className={styles.productLeftSide}>
@@ -142,15 +174,18 @@ export default function OverviewComponent() {
                               <Image
                                 unoptimized
                                 alt="pdf"
-                                src="/assets/chair.jpeg"
+                                src={data.image}
                                 height={0}
                                 width={0}
                               />
+                              <div className={styles.smallCirLe}>
+                                <Image unoptimized height={0} width={0} src='/assets/tata.png' alt="a"/>
+                              </div>
                             </div>
                           </div>
                           <div className={styles.leftGridDetails}>
-                            <h4>{t("RFX1232")}</h4>
-                            <p>{t("Office_Chair")}</p>
+                            <h4>{data.name}</h4>
+                            <p>{data.des}</p>
                             <div className={styles.bottomDetails}>
                               <span>{t("Direct_Order")}</span> <p></p>{" "}
                               <span>12-05-2023</span>
