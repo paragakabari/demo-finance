@@ -767,7 +767,6 @@
             font-weight: 300;
             @include breakpoint("sm-max") {
               position: unset;
-              
             }
           }
           padding: 20px;
@@ -816,14 +815,12 @@
   }
 }
 
-
 .responsiveTable {
   @include breakpoint("sm-max") {
     overflow-x: auto;
   }
 
   .requestTable {
-   
     border-radius: 10px;
     width: 100%;
     border-collapse: collapse;
@@ -879,13 +876,12 @@
         justify-content: center;
         font-size: 20px;
         color: #222;
-        img{
-        height: 60px;
-        width: 60px;
-        min-width: 60px;
-        border-radius: 50%;
-        background-color: #eff6ff;
-        
+        img {
+          height: 60px;
+          width: 60px;
+          min-width: 60px;
+          border-radius: 50%;
+          background-color: #eff6ff;
         }
       }
 
@@ -933,186 +929,184 @@
 }
 
 .allBuyerDetailsSection {
-
   .allBuyerDetailsBox {
-    
-      h6 {
+    h6 {
+      color: #272727;
+      font-size: 17px;
+      // line-height: 21px;
+      font-weight: 600;
+    }
+
+    .secondDetailsAlignment {
+      padding: 30px 0 0 0;
+      h5 {
+        font-size: 20px;
+        line-height: 24px;
+        color: #272727;
+        font-weight: 600;
+      }
+      p {
+        padding: 1px 0 0 0;
+        font-size: 16px;
+        line-height: 21px;
+        font-weight: 300;
+        color: #272727;
+      }
+    }
+
+    .buyerOtherDetailsALignment {
+      padding: 20px 0 0 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 46px;
+      flex-wrap: wrap;
+      @media only screen and (max-width: "1399px") {
+        gap: 20px;
+      }
+      @include breakpoint("md-max") {
+        justify-content: space-between;
+      }
+      .otherDetails {
+        width: 223px;
+        h6 {
+          font-size: 16px;
+          line-height: 20px;
           color: #272727;
-          font-size: 17px;
-          // line-height: 21px;
           font-weight: 600;
+          padding: 0 0 10px 0;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          color: #272727;
+          font-weight: 400;
+        }
       }
+      .addressAlignment {
+        padding: 40px 0 0 0;
+        h6 {
+          font-size: 16px;
+          line-height: 20px;
+          color: #272727;
+          font-weight: 600;
+          padding: 0 0 10px 0;
+        }
 
-      .secondDetailsAlignment {
-          padding: 30px 0 0 0;
-          h5 {
-              font-size: 20px;
-              line-height: 24px;
-              color: #272727;
-              font-weight: 600;
-          }
-          p {
-              padding: 1px 0 0 0;
-              font-size: 16px;
-              line-height: 21px;
-              font-weight: 300;
-              color: #272727;
-          }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          color: #272727;
+          font-weight: 400;
+        }
       }
-
-      .buyerOtherDetailsALignment {
-          padding: 20px 0 0 0;
-          display: flex;
-          align-items: flex-start;
-          gap: 46px;
-          flex-wrap: wrap;
-          @media only screen and (max-width:"1399px") {
-              gap: 20px;
-          }
-          @include breakpoint("md-max") {
-              justify-content: space-between;
-          }
-          .otherDetails {
-              width: 223px;
-              h6 {
-                  font-size: 16px;
-                  line-height: 20px;
-                  color: #272727;
-                  font-weight: 600;
-                  padding:  0 0 10px 0;
-              }
-
-               p {
-                  font-size: 16px;
-                  line-height: 20px;
-                  color: #272727;
-                  font-weight: 400;
-               }
-          }
-          .addressAlignment {
-              padding: 40px 0 0 0;
-              h6 {
-                  font-size: 16px;
-                  line-height: 20px;
-                  color: #272727;
-                  font-weight: 600;
-                  padding:  0 0 10px 0;
-              }
-
-               p {
-                  font-size: 16px;
-                  line-height: 20px;
-                  color: #272727;
-                  font-weight: 400;
-               }
-          }
-      }
+    }
   }
 }
 
 .requestDetailsSection {
   .requestDetailsMainAlignment {
-      padding: 55px 0 0 0;
-      &:first-child {
-          padding: 0;
-      }
-      h4 {
-          font-size: 14px;
-          line-height: 21px;
-          color: #5c5c5c;
-          font-weight: 600;
-      }
+    padding: 55px 0 0 0;
+    &:first-child {
+      padding: 0;
+    }
+    h4 {
+      font-size: 14px;
+      line-height: 21px;
+      color: #5c5c5c;
+      font-weight: 600;
+    }
 
-      .tableDetailsAlignment {
-          padding: 12px 0 0 0;
-          max-width: 100%;
-          overflow-x: auto;
-          table {
-              width: 100%;
-              tbody {
-                  tr {
-                    border-bottom: 1px solid #e0e0e0;
-                    display: block;
-                      td {
-                          color: #000000;
-                          text-transform: capitalize;
-                          font-size: 14px;
-                          line-height: 18px;
-                          font-weight: 300;
-                          padding: 10px 24px ;
-                          white-space: nowrap;
-                          .companuNameAlignment {
-                              h4 {
-                                  font-size: 20px;
-                                  line-height: 25px;
-                                  font-weight: 600;
-                                  color: #000000;
-                              }
-                              p {
-                                  font-size: 12px;
-                                  line-height: 15px;
-                                  font-weight: 500;
-                                  color: rgab(0, 0, 0, 0.8);
-                                  padding: 4px 0 0 0;
-                              }
-                          }
-
-                          .sarDetails {
-                              span {
-                                  font-size: 20px;
-                                  line-height: 25px;
-                                  color: #000000;
-                                  text-transform: uppercase;
-                                  font-weight: 600;
-                              }
-                          }
-
-                          .attachecDocumentAlignment {
-                              button {
-                                  width: 129px;
-                                  height: 24px;
-                                  border-radius: 60px;
-                                  background: #fe6a57;
-                                  color: #ffffff;
-                                  text-transform: capitalize;
-                                  font-size: 13px;
-                                  line-height: 15px;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  cursor: pointer;
-                                  border: none;
-                              }
-                          }
-
-                          .imgAlignment {
-                            border-radius: 50%;
-                            background-color: #f1f3fa;
-                            height: 50px;
-                            width: 50px;
-                            display: flex;
-                            align-items: center;
-                            text-align: center;
-                            justify-content: center;
-                            img{
-
-                              width: 30px;
-                            height: 30px;
-                          }
-                        }
-                          &:last-child {
-                              text-align: right;
-                          }
-                      }
-
-                      &:last-child {
-                          td {
-                              padding: 10px 24px;
-                          }
-                      }
-                  }
+    .tableDetailsAlignment {
+      padding: 12px 0 0 0;
+      max-width: 100%;
+      overflow-x: auto;
+      table {
+        width: 100%;
+        tbody {
+          tr {
+            border-bottom: 1px solid #e0e0e0;
+            display: block;
+            td {
+              color: #000000;
+              text-transform: capitalize;
+              font-size: 14px;
+              line-height: 18px;
+              font-weight: 300;
+              padding: 10px 24px;
+              white-space: nowrap;
+              .companuNameAlignment {
+                h4 {
+                  font-size: 20px;
+                  line-height: 25px;
+                  font-weight: 600;
+                  color: #000000;
+                }
+                p {
+                  font-size: 12px;
+                  line-height: 15px;
+                  font-weight: 500;
+                  color: rgab(0, 0, 0, 0.8);
+                  padding: 4px 0 0 0;
+                }
               }
+
+              .sarDetails {
+                span {
+                  font-size: 20px;
+                  line-height: 25px;
+                  color: #000000;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                }
+              }
+
+              .attachecDocumentAlignment {
+                button {
+                  width: 129px;
+                  height: 24px;
+                  border-radius: 60px;
+                  background: #fe6a57;
+                  color: #ffffff;
+                  text-transform: capitalize;
+                  font-size: 13px;
+                  line-height: 15px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                  border: none;
+                }
+              }
+
+              .imgAlignment {
+                border-radius: 50%;
+                background-color: #f1f3fa;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                img {
+                  border-radius: 50%;
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+              &:last-child {
+                text-align: right;
+              }
+            }
+
+            &:last-child {
+              td {
+                padding: 10px 24px;
+              }
+            }
           }
+        }
       }
+    }
   }
 }

@@ -3,6 +3,29 @@ import styles from "./buyer-detail.module.scss";
 import Image from "next/image";
 export default function RequestComponent() {
   const t = useTranslations("Request");
+const bank=[
+  {
+    name:'HSBC Finance',
+    date:'30 Jan 2024',
+    transationId:'TEA-234',
+    number:'234334 SAR',
+    img:'/assets/sabb.png'
+  },
+  {
+    name:'SABB Finance',
+    date:'2 Feb 2024',
+    transationId:'TEA-235',
+    number:'234334 SAR',
+    img:'/assets/sap.png'
+  },
+  {
+    name:'SAP Finance',
+    date:'30 Jan 2024',
+    transationId:'TEA-234',
+    number:'234334 SAR',
+    img:'/assets/elm.png'
+  },
+]
 
   return (
     <div>
@@ -13,13 +36,13 @@ export default function RequestComponent() {
           <div className={styles.tableDetailsAlignment}>
             <table cellPadding={0} cellSpacing={0}>
               <tbody>
-                {[0, 1, 2].map((index) => {
+                {bank.map((data,index) => {
                   return (
                     <tr key={index}>
                       <td>
                         <div className={styles.imgAlignment}>
                           <Image
-                           src="/assets/pdf.png"
+                           src={data.img}
                             alt="hsbc"
                             width={0}
                             height={0}
@@ -29,15 +52,15 @@ export default function RequestComponent() {
                       </td>
                       <td>
                         <div className={styles.companuNameAlignment}>
-                          <h4>{t("HSBC_Finance")}</h4>
-                          <p>{t("Transaction_Id")}</p>
+                          <h4>{data.name}</h4>
+                          <p>{data?.transationId}</p>
                         </div>
                       </td>
-                      <td>{t("30_Jan_2024")}</td>
+                      <td>{data.date}</td>
                       <td>{t("Invoice")}</td>
                       <td>
                         <div className={styles.sarDetails}>
-                          <span>{t("234334_SAR")}</span>
+                          <span>{data.number}</span>
                         </div>
                       </td>
                       <td>
@@ -58,13 +81,13 @@ export default function RequestComponent() {
           <div className={styles.tableDetailsAlignment}>
             <table cellPadding={0} cellSpacing={0}>
               <tbody>
-                {[0, 1, 2].map((index) => {
+                {bank.map((data,index) => {
                   return (
                     <tr key={index}>
                       <td>
                         <div className={styles.imgAlignment}>
                         <Image
-                           src="/assets/sap.png"
+                           src={data.img}
                             alt="hsbc"
                             width={0}
                             height={0}
@@ -74,15 +97,15 @@ export default function RequestComponent() {
                       </td>
                       <td>
                         <div className={styles.companuNameAlignment}>
-                          <h4>{t("HSBC_Finance")}</h4>
-                          <p>{t("Transaction_Id")}</p>
+                          <h4>{data.name}</h4>
+                          <p>{data.transationId}</p>
                         </div>
                       </td>
-                      <td>{t("30_Jan_2024")}</td>
+                      <td>{data.date}</td>
                       <td>{t("Invoice")}</td>
                       <td>
                         <div className={styles.sarDetails}>
-                          <span>{t("234334_SAR")}</span>
+                          <span>{data.number}</span>
                         </div>
                       </td>
                     </tr>

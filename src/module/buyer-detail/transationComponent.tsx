@@ -21,54 +21,61 @@ export default function TransationComponent({locale}) {
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      img:'/assets/sap.png'
     },
     {
       id: 2,
-      buyerName: "John_Doe",
+      buyerName: "Taka",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      img:'/assets/tata.png'
     },
     {
       id: 3,
-      buyerName: "John_Doe",
+      buyerName: "Roy",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      img:'/assets/roy.png'
     },
     {
       id: 4,
-      buyerName: "John_Doe",
+      buyerName: "Nils",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      img:'/assets/nils.png'
     },
     {
       id: 5,
-      buyerName: "John_Doe",
+      buyerName: "Tom",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      img:'/assets/tata.png'
     },
     {
       id: 6,
-      buyerName: "John_Doe",
+      buyerName: "Alka",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      img:'/assets/alka.png'
     },
     {
       id: 7,
-      buyerName: "John_Doe",
+      buyerName: "Nena",
       workspaceId: "012024",
       date: "01_June_2024",
       status: "InProgress",
       action: "Attach_Doc",
+      img:'/assets/bayan.jpeg'
     },
   ];
   return (
@@ -83,7 +90,7 @@ export default function TransationComponent({locale}) {
                   <div className={Styles.buyersName}>
                     <div className={Styles.requestRound}>
                       <Image
-                        src="/assets/sap.png"
+                        src={data.img}
                         width={0}
                         height={0}
                         alt="round"
@@ -95,7 +102,7 @@ export default function TransationComponent({locale}) {
                 <td>
                   <div>
                     <div className={Styles.tableHeading}>
-                      {datas(data.buyerName)}
+                      {data.buyerName}
                     </div>
                     <div className={Styles.tableSubHeading}>
                       {data.workspaceId}
